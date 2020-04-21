@@ -1,4 +1,3 @@
-!
 <!DOCTYPE html>
 <html lang="">
 
@@ -6,12 +5,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script src=""></script>
-</body>
 
+    <section class="zoom">
+        <img src="images/mountain1.png" id="layer1" alt="mountain">
+        <img src="images/mountain2.png" id="layer2" alt="mountain">
+        <img src="images/text.png" id="text" alt="mountain">
+
+    </section>
+    <!--    CONTENT______-->
+    <section class="content">
+        <h1>The snowy white mountains</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius beatae, esse sed eveniet a rerum facere ea inventore ut expedita dolores qui, delectus sit odio blanditiis earum! Nobis, excepturi, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laboriosam, ullam numquam amet rerum itaque quod voluptatem veritatis a facere corporis consectetur, id dignissimos eos tempora quia harum nihil provident pariatur sint ea. Veniam, aperiam voluptatem. Earum vitae quibusdam esse, ea, repellat molestias provident, incidunt error pariatur, assumenda cum magnam non at fugiat minus laborum accusamus natus! Unde hic rem illo aperiam reprehenderit atque quibusdam expedita repellendus fugit accusamus ullam delectus dolore laboriosam, iure ratione iusto, placeat. Pariatur, inventore beatae. Molestias fugiat distinctio, dicta magni omnis iste consequuntur modi a veniam soluta veritatis voluptatem voluptatibus alias sit voluptate dolore repudiandae?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi excepturi ipsum unde officia, obcaecati consequatur nihil impedit atque harum aut dicta possimus molestias vero quas incidunt hic voluptas id delectus cupiditate consectetur quod eius voluptatibus maiores asperiores. Sit accusantium, recusandae, cumque corrupti quam dolores corporis aperiam, quod nemo cupiditate explicabo unde officia natus, impedit! Praesentium nam inventore delectus obcaecati fugiat ea ex. Quo iusto mollitia, placeat officia molestias provident, autem, aliquid labore quos quaerat fuga ad. Voluptas tempore fugiat doloremque rerum sint, temporibus hic sequi, molestiae vitae soluta nulla beatae aspernatur ad aperiam non! Officiis sint recusandae, harum ea asperiores!</p>
+
+    </section>
+
+
+
+
+
+    <script type="text/javascript">
+        let layer1 = document.getElementById("layer1");
+        scroll = window.pageYOffset;
+        document.addEventListener("scroll", function(e) {
+            let offset = window.pageYOffset;
+            scroll = offset;
+            layer1.style.width = (100 + scroll / 5) + "%";
+        });
+
+        let layer2 = document.getElementById("layer2");
+        scroll = window.pageYOffset;
+        document.addEventListener("scroll", function(e) {
+            let offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll / 5) + "%";
+            layer2.style.left = scroll / 50 + '%';
+        });
+
+        let text = document.getElementById("text");
+        scroll = window.pageYOffset;
+        document.addEventListener("scroll", function(e) {
+            let offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll / 5) + "%";
+            text.style.top = -scroll / 20 + '%';
+        });
+
+    </script>
+</body>
 
 </html>
